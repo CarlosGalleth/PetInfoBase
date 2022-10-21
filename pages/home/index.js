@@ -20,11 +20,21 @@ async function getUser() {
 
 function renderizarUsuario(user){
   console.log(user)
+    let titleInput = document.getElementsByClassName("create-title")[0]
+    let descriptionInput = document.getElementsByClassName("create-description")[0]
+    let userDisconnect = document.getElementById("user-disconnect")
     let userImg = document.getElementById("user-img")
     userImg.src = user.avatar
 
+    userImg.addEventListener('click', () => { 
+      mostrarModalDisconnect()
+      userDisconnect.innerText = `@${user.username}`
+    })
+
     let createPostBtn = document.getElementById("create-post")
     createPostBtn.addEventListener('click', () => {
+      titleInput.value = ""
+      descriptionInput.value = ""
       let createModal = document.getElementById("create-modal")
       createModal.classList.remove("hidden")
     })
@@ -61,6 +71,20 @@ function renderizarUsuario(user){
     })
     criarNovoPost(user)
 }
+
+function mostrarModalDisconnect() {
+  let modalDisconnect = document.getElementsByClassName("disconnect")[0]
+  modalDisconnect.classList.toggle("hidden")
+}
+
+function disconectar() {
+  let btnDisconnect = document.getElementById("disconnect")
+  btnDisconnect.addEventListener('click', () => {
+    localStorage.removeItem("usuarioPetinfo")
+    window.location.assign("../login/index.html")
+  })
+}
+disconectar()
 
 function criarNovoPost(user){
     let createModal = document.getElementById("create-modal")
@@ -139,7 +163,6 @@ function criarNovoPost(user){
       btnAccess.addEventListener('click', () => {
         accessPost(btnAccess, imgUser, h4NameUser, h3Title, h4Description)
       })
-
       postsList.append(li)
     })
 
@@ -209,6 +232,5 @@ function criarNovoPost(user){
           descriptionAccess.innerText = h4Description.innerText
         })
       }
-    
 }
 getUser()

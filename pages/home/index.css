@@ -24,9 +24,10 @@
     border-radius: var(--radius-2);
 }
 .user > img{
+    cursor: pointer;
     border-radius: 50%;
     height: 45px;
-    border: 1px solid var(--brand200);
+    border: 1.5px solid var(--brand200);
 }
 .feed-box{
     position: relative;
@@ -121,4 +122,38 @@
 }
 .access-login{
     color: var(--brand200);
+}
+
+
+
+.disconnect{
+    border-radius: var(--radius-2);
+    width: 150px;
+    position: absolute;
+    background-color: white;
+    right: -50px;
+    bottom: -47px;
+    box-shadow: 0px 4px 30px -12px rgba(0, 0, 0, 0.5);
+}
+.disconnect > p{
+    color: black;
+    font-weight: 600;
+    padding: 5px 15px;
+}
+.btn-loggout{
+    background-color: white;
+    color: var(--gray500);
+    border-radius: 0 0 4px 4px;
+    border: none;
+    width: 100%;
+    padding: 5px 15px;
+    gap: var(--gap-6);
+    font-weight: 600;
+}
+.btn-loggout:hover{
+    background-color: var(--gray600);
+    color: black;
+}
+.btn-loggout > img{
+    width: 20px;
 }
