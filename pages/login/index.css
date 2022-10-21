@@ -1,1 +1,84 @@
-/* Desenvolva a estilização da sua página aqui */
+
+
+.container{
+    margin: 0 auto;
+    width: 70%;
+    height: 100vh;
+    gap: var(--gap-4);
+} 
+
+
+.petinfo-brand-section{
+    width: 45%;
+    gap: var(--gap-4);
+}
+.petinfo-brand{
+    gap: var(--gap-3);
+    font-size: 30px;
+}
+.petinfo-brand > h1 {
+    font-size: 35px;
+}
+.petinfo-brand > h3{
+    width: 90%;
+}
+.petinfo-brand span{
+    color: var(--brand100);
+}
+.petinfo-brand > p{
+    color: var(--gray400);
+    font-size: 20px;
+    width: 80%;
+}
+
+.big-cont{
+    gap: var(--gap-5);
+}
+.big-cont > img{
+    height: 100%;
+}
+.medium-cont{
+    gap: var(--gap-5);
+}
+.medium-cont > img{
+    height: 100%;
+}
+.small-cont{
+    gap: var(--gap-5);
+}
+
+
+
+.login-section{
+    width: 35%;
+    border: 2px solid var(--gray600);
+    padding: 44px 24px;
+    gap: var(--gap-3);
+    border-radius: var(--radius-2);
+}
+.login-section > h3{
+    font-size: 22px;
+}
+.login-section button{
+    height: 44px;
+    width: 100%;
+    border-radius: var(--radius-2);
+    font-size: 15px;
+}
+.form-input > small{
+    color: var(--alert100);
+}
+.form-bottom{
+    gap: var(--gap-4);
+}
+.form-bottom > p{
+    font-weight: 600;
+    color: var(--gray100) !important;
+}
+.form-bottom p {
+    color: var(--gray400);
+}
+.form-bottom :nth-child(4){
+    border: 1px solid var(--gray600);
+    background-color: transparent;
+}

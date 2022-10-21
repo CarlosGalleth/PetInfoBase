@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/globalStyles.css">
+    <link rel="stylesheet" href="../../styles/modals.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Petinfo - home</title>
+</head>
+<body>
+    <header class="top flex justify-between align-center">
+        <h1>Petinfo</h1> 
+        <div class="user flex align-center">
+            <button id="create-post">Criar publicação</button>
+            <img src="../../pages/login/assets/cat-3.png" id="user-img" alt="">
+        </div> 
+    </header>
+
+    <div class="feed-box flex justify-center">
+        <div class="feed">
+            <h3>Feed</h3>
+        </div>
+    </div>
+
+    <main class="container flex flex-col">
+        <ul class="posts-list flex">
+
+            <!--
+            <li class="post flex flex-col">
+                <div class="master-box flex justify-between align-center">
+                    <div class="user-info-box flex align-center">
+                        <img src="../../pages/login/assets/cat-3.png" alt="">
+                        <h4>Samuel Leão</h4>
+                        <div>|</div>
+                        <p>Outubro de 2022</p>
+                    </div>
+
+                    <div class="post-buttons flex">
+                        <button class="unchoosed choosed">Editar</button>
+                        <button class="unchoosed">Excluir</button>
+                    </div>
+                </div>
+
+                <div class="post-title">
+                    <h3>Outubro Rosa: Detalhes sobre a importância da prevenção do câncer de mama em cadelas e gatas</h3>
+                </div>
+                
+                <div class="post-description">
+                    <h4>Assim como em humanos, cadelas e gatas também podem desenvolver câncer de mama. Ainda hoje, para ambas as espécies, o câncer de mama tem maior...</h4>
+                </div>
+
+                <a href="" class="access-post">Acessar publicação</a>
+            </li>
+            -->
+        </ul>
+    </main> 
+
+    <div class="created-acc-modal flex flex-col hidden" id="deleted-alert">
+        <div class="created-acc-top flex align-center">
+            <img src="../register/assets/check.webp" alt="">
+            <h3>Post deletado com sucesso!</h3>
+        </div>
+        <h3>O post selecionado para exlusão foi deletado,<br> a partir de agora não aparecerá no seu feed</h3>
+    </div>
+
+    <!-- --------------------------------Modal------------------------------------- -->
+
+    <div class="modal-bg flex align-center justify-center hidden" id="access-modal">  <!--Acessar post-->
+        <div class="modal flex flex-col">
+
+            <div class="modal-top flex justify-between align-center">
+                <div class="user-info-modal flex align-center">
+                    <img src="../../pages/login/assets/cat-3.png" alt="" id="access-img-modal">
+                    <h4 id="access-name-modal">Samuel Leão</h4>
+                    <div>|</div>
+                    <p id="access-date-modal">Outubro de 2022</p>
+                </div>
+                <button class="close-modal" id="close-access">X</button>
+            </div>
+            <h3 id="access-title-modal">Outubro Rosa: Detalhes sobre a importância da prevenção do câncer de mama em cadelas e gatas</h3>
+
+            <p id="access-description-modal">
+                Assim como em humanos, cadelas e gatas também podem desenvolver câncer de mama. Ainda hoje, para ambas as espécies, o câncer de mama tem maior incidência. Mesmo com a evolução da medicina veterinária e da oncologia, o câncer de mama muitas vezes não tem cura, sendo o tratamento paliativo uma alternativa para dar conforto às fêmeas. 
+
+                Por isso, a conscientização sobre o tema é uma das ações de prevenção de maior importância, principalmente para a campanha do outubro rosa. Então como podemos ajudar a prevenir o câncer de mama em cadelas e gatas?
+                
+                Assim como outros tipos de câncer, o câncer de mama pode ter inúmeras causas. Entre  as mais comuns, temos fatores genéticos, como predisposição de algumas raças, exposição à poluição, tabagismo passivo, obesidade, além do fato de os pets estarem vivendo mais, o que também pode causar maior chances de tumores. No caso do câncer de mama, a influência hormonal é um dos fatores de maior contribuição para o aparecimento dessa doença.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="modal-bg flex align-center justify-center hidden" id="edit-modal">  <!--Editar post-->
+        <div class="modal flex flex-col">
+            <div class="modal-top flex justify-between align-center">
+                <h4>Edição</h4>
+                <button class="close-modal" id="close-edit">X</button>
+            </div>
+
+            <div class="edit-form flex flex-col">
+                <label for="edit-title">Título do post</label>
+                <textarea id="edit-title" cols="30" rows="1"></textarea>
+            </div>
+
+            <div class="edit-form flex flex-col">
+                <label for="edit-content">Conteúdo do post</label>
+                <textarea id="edit-content" cols="30" rows="6"></textarea>
+            </div>
+
+            <div class="edit-modal-buttons flex justify-end">
+                <button id="close-edit">Cancelar</button>
+                <button id="save-edited-post">Salvar alterações</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-bg flex align-center justify-center hidden" id="create-modal">  <!--Criar post-->
+        <div class="modal flex flex-col">
+            <div class="modal-top flex justify-between align-center">
+                <h4>Criar novo post</h4>
+                <button class="close-modal" id="close-create">X</button>
+            </div>
+
+            <div class="edit-form flex flex-col">
+                <label for="edit-title">Título do post</label>
+                <textarea id="edit-title" cols="30" rows="1" placeholder="Digite o título aqui..." class="create-title"></textarea>
+            </div>
+
+            <div class="edit-form flex flex-col">
+                <label for="edit-content">Conteúdo do post</label>
+                <textarea id="edit-content" cols="30" rows="5" placeholder="Digite o conteúdo do post aqui..." class="create-description"></textarea>
+            </div>
+
+            <div class="edit-modal-buttons flex justify-end">
+                <button id="close-create">Cancelar</button>
+                <button id="post-button">Publicar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-bg flex justify-center hidden" id="delete-modal">               <!--Confirmar exclusão de post-->
+        <div class="modal delete-modal flex flex-col">
+            <div class="modal-top flex justify-between align-center">
+                <h4>Confirmação de exclusão</h4>
+                <button class="close-modal" id="close-delete">X</button>
+            </div>
+
+            <div class="delete-modal-alert flex flex-col">
+                <h4>Tem certeza que deseja excluir este post?</h4>
+
+                <p>Essa ação não poderá ser desfeita, então pedimos que tenha cautela antes de concluir</p>
+            </div>
+
+            <div class="delete-modal-buttons flex">
+                <button id="close-delete">Cancelar</button>
+                <button id="delete-post">Sim, excluir este post</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html> 

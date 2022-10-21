@@ -4,10 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petinfo - Login</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="../../styles/globalStyles.css">
+    <link rel="stylesheet" href="../../styles/button&inputs.css">
+    <title>Petinfo - login</title>
 </head>
 <body>
-    <main></main>
-    <script type="module" src="index.js"></script>
+    <main class="container flex align-center justify-center">
+        <section class="petinfo-brand-section flex flex-col">
+            <div class="petinfo-brand flex flex-col">
+                <h1>Petinfo</h1>
+                <h3><span>Amor</span> e <span>carinho</span> por meio do conhecimento</h3>
+                <p>Todas as informações para melhorar a vida do seu pet em um só lugar</p>
+            </div>
+
+            <div class="big-cont flex">
+                <div class="medium-cont flex flex-col">
+                    <div class="small-cont flex">
+                        <img src="./assets/cat-4.png" alt="">
+                        <img src="./assets/cat-3.png" alt="">
+                    </div>
+                    <img src="./assets/cat-2.png" alt="">
+                </div>
+                <img src="./assets/cat-1.png" alt="">
+            </div>
+        </section>
+
+        <section class="login-section flex flex-col">
+            <h3>Login</h3>
+
+            <div class="form-input flex flex-col">
+                <label for="login-user">Email</label>
+                <input id="login-user" type="text" placeholder="Digite seu email aqui...">
+            </div>
+
+            <div class="form-input flex flex-col">
+                <label for="login-password">Senha</label>
+                <input id="login-password" type="password" placeholder="Digite sua senha aqui...">
+                <small id="wrong-acc" class="hidden">A senha está incorreta</small>
+            </div>
+
+            <div class="form-bottom flex flex-col align-center">
+                <button class="register-button flex align-center justify-center">Acessar</button>
+
+                <p>Ainda não possui conta?</p>
+
+                <div class="flex flex-col align-center">
+                    <p>Clicando no botão abaixo, você pode se cadastrar rapidamente</p>
+                </div>
+
+                <button id="register">Cadastrar</button>
+            </div>
+        </section>
+    </main>
+    <script src="./index.js"></script>
 </body>
 </html>

@@ -1,0 +1,124 @@
+
+
+.top{
+    position: relative;
+    width: 55%;
+    margin: 50px auto;
+    height: max-content;
+    z-index: 1;
+}
+.top > h1{
+    font-size: 28px;
+    font-weight: 500; 
+}
+.user{
+    gap: var(--gap-5);
+    height: max-content;
+}
+.user > button{
+    padding: 13px 21px;
+    background-color: var(--brand200);
+    color: var(--gray900);
+    font-size: 15px;
+    border: none;
+    border-radius: var(--radius-2);
+}
+.user > img{
+    border-radius: 50%;
+    height: 45px;
+    border: 1px solid var(--brand200);
+}
+.feed-box{
+    position: relative;
+    background-color: var(--gray800);
+    padding: 25px 0;
+    z-index: 1;
+}
+.feed{
+    width: 55%;
+}
+
+.container{
+    position: relative;
+    margin: 25px auto;
+    width: 55%;
+    z-index: 1;
+}
+.posts-list{
+    flex-direction: column-reverse;
+    gap: var(--gap-1);
+}
+.post{
+    gap: var(--gap-3);
+}
+.user-info-box{
+    gap: var(--gap-5);
+}
+.user-info-box img{
+    border-radius: 50%;
+    height: 45px;
+}
+.user-info-box h4{
+    font-weight: 600;
+}
+.user-info-box > div,p{
+    color: var(--gray400);
+}
+.post-buttons{
+    gap: var(--gap-6);
+}
+.post-buttons > button{
+    padding: 8px 16px;
+    border-radius: var(--radius-2);
+    font-size: 15px;
+}
+.unchoosed{
+    border: none;
+    background-color: var(--gray600);
+    font-weight: 600;
+    color: var(--gray400);
+}
+.choosed{
+    background-color: transparent;
+    border: 1px solid var(--gray600);
+    color: var(--gray100);
+}
+.post-title > h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+.post-description > h4{
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--gray400);
+}
+.access-post{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--brand100);
+    background-color: transparent;
+    width: max-content;
+    border: none;
+}
+
+
+
+.created-acc-modal{
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    background-color: var(--gray900);
+    padding: 26px 45px;
+    border-radius: var(--radius-1);
+    gap: var(--gap-5);
+    box-shadow: 0px 4px 30px -12px rgba(0, 0, 0, 0.5);
+}
+.created-acc-top{
+    gap: var(--gap-5);
+}
+.created-acc-top > img{
+    width: 30px;
+}
+.access-login{
+    color: var(--brand200);
+}

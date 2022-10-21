@@ -1,0 +1,118 @@
+
+.container{
+    margin: 0 auto;
+    width: 70%;
+    height: 100vh;
+    gap: var(--gap-1);
+}
+.login-section{
+    width: 35%;
+    border: 2px solid var(--gray600);
+    padding: 44px 24px;
+    gap: var(--gap-3);
+    border-radius: var(--radius-2);
+}
+.top > h3{
+    font-size: 22px;
+}
+.top > button{
+    padding: 8px 16px;
+    border-radius: var(--radius-2);
+    background-color: transparent;
+}
+.form-input{
+    gap: var(--gap-6);
+}
+.form-input > label{
+    font-weight: 600;
+}
+.form-input > input{
+    background-color: var(--gray800);
+    height: 44px;
+    width: 100%;
+    border-radius: var(--radius-2);
+    padding-left: 12px;
+    border: 1px solid var(--gray600);
+}
+.bottom-buttons{
+    gap: var(--gap-3);
+}
+.bottom-buttons > button{
+    height: 44px;
+    width: 100%;
+    border-radius: var(--radius-2);
+    font-size: 15px;
+}
+.register-button{
+    background-color: var(--brand200);
+    color: var(--gray900);
+    border: none;
+}
+.back-to-login{
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 15px;
+    border: 1px solid var(--gray600);
+}
+
+
+
+.petinfo-brand{
+    width: 45%;
+    gap: var(--gap-4);
+    padding: 0px 35px;
+}
+.petinfo-text{
+    font-size: 24px;
+    font-weight: 400;
+    gap: var(--gap-3);
+}
+.petinfo-text > h1{
+    font-weight: 500;
+}
+.petinfo-text > h3{
+    color: var(--brand100);
+    font-weight: 600;
+    font-size: 35px;
+}
+.petinfo-text > p{
+    font-size: 21px;
+    color: var(--gray400);
+}
+.cats-full{
+    gap: var(--gap-5);
+}
+.cats-full > img{
+    height: 100%;
+}
+.cats-3{
+    gap: var(--gap-5);
+}
+.cats-3 > img{
+    height: 100%;
+}
+.cats-2{
+    gap: var(--gap-5);
+}
+
+
+
+.created-acc-modal{
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    background-color: var(--gray900);
+    padding: 26px 45px;
+    border-radius: var(--radius-1);
+    gap: var(--gap-5);
+    box-shadow: 0px 4px 30px -12px rgba(0, 0, 0, 0.5);
+}
+.created-acc-top{
+    gap: var(--gap-5);
+}
+.created-acc-top > img{
+    width: 30px;
+}
+.access-login{
+    color: var(--brand200);
+}

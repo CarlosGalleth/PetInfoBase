@@ -1,0 +1,20 @@
+
+.form-input{
+    gap: var(--gap-6);
+}
+.form-input > label{
+    font-weight: 600;
+}
+.form-input > input{
+    background-color: var(--gray800);
+    height: 44px;
+    width: 100%;
+    border-radius: var(--radius-2);
+    padding-left: 12px;
+    border: 1px solid var(--gray600);
+}
+.register-button{
+    background-color: var(--brand200);
+    color: var(--gray900);
+    border: none;
+}

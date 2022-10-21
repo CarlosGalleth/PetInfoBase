@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/globalStyles.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Petinfo - Register</title> 
+</head>
+<body>
+    <main class="container flex align-center justify-center">
+        <section class="login-section flex flex-col">
+            <div class="top flex justify-between align-center">
+                <h3>Cadastro</h3>
+                <button class="back-to-login">Voltar para o login</button>
+            </div>
+
+            <div class="form-input flex flex-col">
+                <label for="user-input">Usuário</label>
+                <input id="user-input" type="text" placeholder="Digite seu usuário aqui...">
+            </div>
+
+            <div class="form-input flex flex-col">
+                <label for="email-input">Email</label>
+                <input id="email-input" type="text" placeholder="Digite seu email aqui...">
+            </div>
+
+            <div class="form-input flex flex-col">
+                <label for="img-input">Link da foto do perfil</label>
+                <input id="img-input" type="text" placeholder="Insira o link aqui...">
+            </div class="form-input">
+
+            <div class="form-input flex flex-col">
+                <label for="password-input">Senha</label>
+                <input id="password-input" type="password" placeholder="Digite sua senha aqui...">
+            </div>
+
+            <div class="bottom-buttons flex flex-col">
+                <button class="register-button flex justify-center align-center">Cadastrar</button>
+                <button class="back-to-login">Voltar para o login</button>
+            </div>
+        </section>
+
+        <section class="petinfo-brand flex flex-col">
+            <div class="petinfo-text flex flex-col">
+                <h1>Petinfo</h1>
+                <h3>Ooooooba!</h3>
+                <p>Agora vamos poder contribuir para o bem estar do seu pet por meio do conhecimento.</p>
+            </div>
+
+            <div class="cats-full flex">
+                <img src="./assets/cat-1.png" alt="">
+                <div class="cats-3 flex flex-col">
+                    <div class="cats-2 flex">
+                        <img src="./assets/cat-2.png" alt="">
+                        <img src="./assets/cat-4.png" alt="">
+                    </div>
+                    <img src="./assets/cat-3.png" alt="">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="created-acc-modal flex flex-col hidden">
+        <div class="created-acc-top flex align-center">
+            <img src="./assets/check.webp" alt="">
+            <h3>Sua conta foi criada com sucesso!</h3>
+        </div>
+        <h3>Agora você pode acessar os conteúdos utilizando seu <br> usuário e senha na página de login: <a href="../login/index.html" class="access-login">Acessar página de login</a></h3>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
