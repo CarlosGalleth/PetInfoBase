@@ -12,7 +12,9 @@ async function getUser() {
       },
     })
       .then((response) => response.json())
-      .then((reposonseJson) => renderizarUsuario(reposonseJson));
+      .then((reposonseJson) => {
+        renderizarUsuario(reposonseJson)
+      });
     return user;
 }
 
@@ -23,7 +25,8 @@ function renderizarUsuario(user){
 
     let createPostBtn = document.getElementById("create-post")
     createPostBtn.addEventListener('click', () => {
-        criarNovoPost(user)
+      let createModal = document.getElementById("create-modal")
+      createModal.classList.remove("hidden")
     })
 
     // ----------------Fechar modal de criar post----------------------------------
@@ -56,11 +59,11 @@ function renderizarUsuario(user){
         deleteModal.classList.add("hidden")
       })
     })
+    criarNovoPost(user)
 }
 
 function criarNovoPost(user){
     let createModal = document.getElementById("create-modal")
-    createModal.classList.remove("hidden")
     let titleInput = document.getElementsByClassName("create-title")[0]
     let descriptionInput = document.getElementsByClassName("create-description")[0]
     let postButton = document.getElementById("post-button")
