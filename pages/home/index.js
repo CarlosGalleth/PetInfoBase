@@ -129,11 +129,18 @@ function criarNovoPost(user){
       createModal.classList.add("hidden")
       
       li.append(divMaster, divPostTitle, divPostDescription, btnAccess)
-      postsList.append(li)
 
-      editarPost(btnEdit, h3Title, h4Description, titleInput, descriptionInput)
-      deletePost(btnDelete, li)
-      accessPost(btnAccess, imgUser, h4NameUser, h3Title, h4Description)
+      btnEdit.addEventListener('click', () => {
+        editarPost(btnEdit, h3Title, h4Description, titleInput, descriptionInput)
+      })
+      btnDelete.addEventListener('click', () => {
+        deletePost(btnDelete, li)
+      })
+      btnAccess.addEventListener('click', () => {
+        accessPost(btnAccess, imgUser, h4NameUser, h3Title, h4Description)
+      })
+
+      postsList.append(li)
     })
 
       //---------------------Editar Post-----------------------------------------------------
