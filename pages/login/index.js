@@ -73,16 +73,19 @@ async function logarUsuário() {
             },
             body: JSON.stringify(userData), 
         })
-        .then((response) => response.json())
-        .then((responseJson) => {
-            if (responseJson.message == "O email está incorreto") {
+        .then((response) => {
+            if (response.status !== 200) {
                 alertWrongAcc.classList.remove("hidden")
                 userPass.style.border = "1px solid var(--alert100)"
             }
             else{
-                localStorage.setItem("usuarioPetinfo", responseJson.token)
                 window.location.assign("../home/index.html")
             }
+            return response.json()
+        })
+        .then((responseJson) => {
+            localStorage.setItem("usuarioPetinfo", responseJson.token)
+           return responseJson
         })
         .catch((error) => error);
 
