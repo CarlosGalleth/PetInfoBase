@@ -48,6 +48,7 @@
 .posts-list{
     flex-direction: column-reverse;
     gap: var(--gap-1);
+    margin-bottom: 100px;
 }
 .post{
     gap: var(--gap-3);
@@ -105,7 +106,8 @@
 
 
 .created-acc-modal{
-    position: absolute;
+    position: fixed;
+    width: max-content;
     right: 25px;
     bottom: 25px;
     background-color: var(--gray900);

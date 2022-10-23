@@ -1,6 +1,7 @@
 
 const baseURL = "http://localhost:3333"
 let userToken = localStorage.getItem("usuarioPetinfo")
+let mainUser = ""
  
 let date = new Date()
 let currentYear = date.getFullYear()
@@ -29,6 +30,7 @@ async function getUser() {
 }
 
 function renderizarUsuario(user){
+  mainUser = user
   console.log(user)
     let titleInput = document.getElementsByClassName("create-title")[0]
     let discriptionInput = document.getElementsByClassName("create-discription")[0]
@@ -47,37 +49,6 @@ function renderizarUsuario(user){
       discriptionInput.value = ""
       let createModal = document.getElementById("create-modal")
       createModal.classList.remove("hidden")
-    })
-
-    // ----------------Fechar modal de criar post----------------------------------
-    let closeCreateModal = document.querySelectorAll("#close-create")
-    let createModal = document.getElementById("create-modal")
-    closeCreateModal.forEach((elem) => {
-        elem.addEventListener('click', () => {
-            createModal.classList.add("hidden")
-        })
-    })
-    // ----------------Fechar modal de editar post---------------------------------
-    let closeEditModal = document.querySelectorAll("#close-edit")
-    let editModal = document.getElementById("edit-modal")
-    closeEditModal.forEach((elem) => {
-      elem.addEventListener('click', () => {
-        editModal.classList.add("hidden")
-      })
-    })
-    // ----------------Fechar modal de acessar post---------------------------------
-    let closeAccessModal = document.getElementById("close-access")
-    let accessModal = document.getElementById("access-modal")
-    closeAccessModal.addEventListener('click', () => {
-      accessModal.classList.add("hidden")
-    })
-    // ----------------Fechar modal de deletar post---------------------------------
-    let closeDeleteModal = document.querySelectorAll("#close-delete")
-    let deleteModal = document.getElementById("delete-modal")
-    closeDeleteModal.forEach((elem) => {
-      elem.addEventListener('click', () => {
-        deleteModal.classList.add("hidden")
-      })
     })
     criarPost()
 }
@@ -144,6 +115,7 @@ function criarPost() {
   })
 }
 
+
 function renderizarPost(post){
   let createModal = document.getElementById("create-modal")
   let postsList = document.getElementsByClassName("posts-list")[0]
@@ -194,7 +166,21 @@ function renderizarPost(post){
   btnAccess.innerText = "Acessar publicação"
 
   createModal.classList.add("hidden")
-      
+  
+  if (post.user.id !== mainUser.id) {
+    btnEdit.classList.add("hidden")
+    btnDelete.classList.add("hidden")
+  }
+
+  if (post.content.length >= 145) {
+    let limitedContent = post.content.substr(0, 145)
+    h4Description.innerText = limitedContent + " ..."
+  }
+  if (post.title.length >= 145) {
+    let limitedContent = post.content.substr(0, 145)
+    h3Title.innerText = limitedContent + " ..."
+  }
+
   li.append(divMaster, divPostTitle, divPostDescription, btnAccess)
   postsList.append(li)
 
