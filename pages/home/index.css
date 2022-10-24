@@ -27,6 +27,7 @@
     cursor: pointer;
     border-radius: 50%;
     height: 45px;
+    width: 45px;
     border: 1.5px solid var(--brand200);
 }
 .feed-box{
@@ -59,6 +60,7 @@
 .user-info-box img{
     border-radius: 50%;
     height: 45px;
+    width: 45px;
 }
 .user-info-box h4{
     font-weight: 600;
